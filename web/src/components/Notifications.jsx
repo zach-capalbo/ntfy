@@ -213,11 +213,34 @@ const MarkdownContent = ({ content }) => {
   return <MarkdownContainer>{reactContent}</MarkdownContainer>;
 };
 
+const JSONContent = ({ content }) => {
+  return <json-viewer style={{
+    "--background-color": "transparent",
+    "--font-size": "0.8rem",
+    "--string-color": "#aca",
+  }}>{ content }</json-viewer>
+}
+
+function isJson(s) {
+  try {
+    let o = JSON.parse(s)
+    if (typeof o == "object") return true;
+    return (Object.keys(o).length > 0)
+  }
+  catch(e)
+  {
+    return false
+  }
+}
+
 const NotificationBody = ({ notification }) => {
   const displayAsMarkdown = notification.content_type === "text/markdown";
   const formatted = formatMessage(notification);
   if (displayAsMarkdown) {
     return <MarkdownContent content={formatted} />;
+  } else if (isJson(notification.message))
+  {
+    return <JSONContent content={notification.message} />;
   }
   return autolink(formatted);
 };
