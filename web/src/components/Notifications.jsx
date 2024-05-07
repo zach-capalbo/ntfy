@@ -218,6 +218,7 @@ const JSONContent = ({ content }) => {
     "--background-color": "transparent",
     "--font-size": "0.8rem",
     "--string-color": "#aca",
+    "overflow-x": "auto",
   }}>{ content }</json-viewer>
 }
 

@@ -1,4 +1,9 @@
 /** @type {import("@mui/material").ThemeOptions} */
+import '@fontsource/source-sans-pro/400.css';
+import '@fontsource/source-sans-pro/700.css';
+
+// See: https://bareynol.github.io/mui-theme-creator
+
 const baseThemeOptions = {
   components: {
     MuiListItemIcon: {
@@ -20,10 +25,9 @@ const baseThemeOptions = {
   },
   typography: {
     fontFamily: [
-      'Lato',
       'Source Sans Pro',
-      // 'Consolas',
     ].join(','),
+    fontSize: 12,
   },
 };
 
@@ -36,15 +40,75 @@ export const lightTheme = {
     ...baseThemeOptions.components,
   },
   palette: {
-    mode: "light",
+    type: 'light',
     primary: {
-      main: "#338574",
+      main: '#3f563f',
     },
     secondary: {
-      main: "#6cead0",
+      main: '#87afda',
     },
-    error: {
-      main: "#c30000",
+    background: {
+      default: '#f5f5f5',
+      paper: "white",
+    },
+  },
+  typography: {
+    fontFamily: 'Source Sans Pro',
+    fontSize: 14,
+  },
+  shape: {
+    borderRadius: 2,
+  },
+  props: {
+    MuiList: {
+      dense: true,
+    },
+    MuiMenuItem: {
+      dense: true,
+    },
+    MuiTable: {
+      size: 'small',
+    },
+    MuiButton: {
+      size: 'small',
+    },
+    MuiButtonGroup: {
+      size: 'small',
+    },
+    MuiCheckbox: {
+      size: 'small',
+    },
+    MuiFab: {
+      size: 'small',
+    },
+    MuiFormControl: {
+      margin: 'dense',
+      size: 'small',
+    },
+    MuiFormHelperText: {
+      margin: 'dense',
+    },
+    MuiIconButton: {
+      size: 'small',
+    },
+    MuiInputBase: {
+      margin: 'dense',
+    },
+    MuiInputLabel: {
+      margin: 'dense',
+    },
+    MuiRadio: {
+      size: 'small',
+    },
+    MuiSwitch: {
+      size: 'small',
+    },
+    MuiTextField: {
+      margin: 'dense',
+      size: 'small',
+    },
+    MuiTooltip: {
+      arrow: true,
     },
   },
 };
@@ -57,25 +121,81 @@ export const darkTheme = {
     MuiSnackbarContent: {
       styleOverrides: {
         root: {
-          color: "#000",
-          backgroundColor: "#aeaeae",
         },
       },
     },
   },
   palette: {
     mode: "dark",
-    background: {
-      paper: "#1b2124",
-    },
     primary: {
-      main: "#65b5a3",
+      main: '#a5b5a5',
     },
     secondary: {
-      main: "#6cead0",
+      main: '#bee2e2',
+    },
+    background: {
+      default: '#1e1e1e',
+      paper: '#1e1e1e',
     },
     error: {
-      main: "#fe4d2e",
+      main: '#f37971',
     },
   },
+  spacing: 4,
+  shape: {
+    borderRadius: 2,
+  },
+  shadows: ["none"],
+  props: {
+    MuiList: {
+      dense: true,
+    },
+    MuiMenuItem: {
+      dense: true,
+    },
+    MuiTable: {
+      size: 'small',
+    },
+    MuiButton: {
+      size: 'small',
+    },
+    MuiButtonGroup: {
+      size: 'small',
+    },
+    MuiCheckbox: {
+      size: 'small',
+    },
+    MuiFab: {
+      size: 'small',
+    },
+    MuiFormControl: {
+      margin: 'dense',
+      size: 'small',
+    },
+    MuiFormHelperText: {
+      margin: 'dense',
+    },
+    MuiIconButton: {
+      size: 'small',
+    },
+    MuiInputBase: {
+      margin: 'dense',
+    },
+    MuiInputLabel: {
+      margin: 'dense',
+    },
+    MuiRadio: {
+      size: 'small',
+    },
+    MuiSwitch: {
+      size: 'small',
+    },
+    MuiTextField: {
+      margin: 'dense',
+      size: 'small',
+    },
+    MuiTooltip: {
+      arrow: true,
+    },
+  }
 };

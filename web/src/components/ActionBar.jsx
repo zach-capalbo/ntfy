@@ -43,7 +43,7 @@ const ActionBar = (props) => {
 
     switch (theme.palette.mode) {
       case "dark":
-        return "linear-gradient(150deg, #203631 0%, #2a6e60 100%)";
+        return `linear-gradient(150deg, ${theme.palette.secondary.dark} 0%, ${theme.palette.primary.main} 100%)`;
 
       case "light":
       default:
@@ -63,7 +63,7 @@ const ActionBar = (props) => {
       <Toolbar
         sx={{
           pr: "24px",
-          background: getActionBarBackground(),
+          // background: getActionBarBackground(),
         }}
       >
         <IconButton
