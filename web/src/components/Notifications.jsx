@@ -118,7 +118,7 @@ const NotificationList = (props) => {
       scrollableTarget="main"
     >
       <Container
-        maxWidth="md"
+        maxWidth="xl"
         role="list"
         aria-label={t("notifications_list")}
         sx={{
@@ -248,8 +248,12 @@ const NotificationItem = (props) => {
   const showActions = hasAttachmentActions || hasClickAction || hasUserActions;
 
   return (
-    <Card sx={{ padding: 1 }} role="listitem" aria-label={t("notifications_list_item")}>
-      <CardContent>
+    <Box sx={{
+      borderTop: "1px solid #aaa",
+      borderLeft: "1px dashed #777",
+      paddingLeft: "1em",
+    }} role="listitem" aria-label={t("notifications_list_item")}>
+      {/* <CardContent sx={{padding: "1px 1em", pb: 0, '&.MuiCardContent-root:last-child': {paddingBottom: 2}}}> */}
         <Tooltip title={t("notifications_delete")} enterDelay={500}>
           <IconButton onClick={handleDelete} sx={{ float: "right", marginRight: -1, marginTop: -1 }} aria-label={t("notifications_delete")}>
             <CloseIcon />
@@ -303,7 +307,7 @@ const NotificationItem = (props) => {
             {t("notifications_tags")}: {tags}
           </Typography>
         )}
-      </CardContent>
+      {/* </CardContent> */}
       {showActions && (
         <CardActions sx={{ paddingTop: 0 }}>
           {hasAttachmentActions && (
@@ -337,7 +341,7 @@ const NotificationItem = (props) => {
           {hasUserActions && <UserActions notification={notification} />}
         </CardActions>
       )}
-    </Card>
+    </Box>
   );
 };
 

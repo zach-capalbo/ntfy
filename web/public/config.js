@@ -6,10 +6,10 @@
 // During web development, you may change values here for rapid testing.
 
 var config = {
-  base_url: window.location.origin, // Change to test against a different server
+  base_url: "https://ntfy.io.zachcapalbo.com", //window.location.origin, // Change to test against a different server
   app_root: "/",
-  enable_login: true,
-  enable_signup: true,
+  enable_login: false,
+  enable_signup: false,
   enable_payments: false,
   enable_reservations: true,
   enable_emails: true,

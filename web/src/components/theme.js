@@ -18,6 +18,13 @@ const baseThemeOptions = {
       },
     },
   },
+  typography: {
+    fontFamily: [
+      'Lato',
+      'Source Sans Pro',
+      // 'Consolas',
+    ].join(','),
+  },
 };
 
 // https://github.com/binwiederhier/ntfy-android/blob/main/app/src/main/res/values/colors.xml

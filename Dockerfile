@@ -12,5 +12,5 @@ LABEL org.opencontainers.image.description="Send push notifications to your phon
 RUN apk add --no-cache tzdata
 COPY ntfy /usr/bin
 
-EXPOSE 80/tcp
+# EXPOSE 80/tcp
 ENTRYPOINT ["ntfy"]
